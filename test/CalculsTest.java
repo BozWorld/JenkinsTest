@@ -62,6 +62,20 @@ class CalculsTest {
 	 */
 	@Test
 	void testAdditionner() {
+		if ( c1.additionner() != 3)
+		{
+			fail("methode additionner non conforme 3+1=4 ne fonctionne pas.");
+		}
+		if ( c1.additionner() != 300)
+		{
+			fail("methode additionner non conforme 100+200=300 ne fonctionne pas.");
+		}
+		if ( c1.additionner() != 30)
+		{
+			fail("methode additionner non conforme 10+20=30 ne fonctionne pas.");
+		}
+		
+		assertEquals(c1.additionner(),3, "methode additionner non conforme 2+1 = 3 ne fonctionne pas");
 	}
 
 	/**
