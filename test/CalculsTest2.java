@@ -29,7 +29,7 @@ class CalculsTest2 {
     static Stream<Arguments> chargerJeuDeTestAddition() throws Throwable 
     {
         return Stream.of(
-            Arguments.of(2,2,4), // appellera : testMultiplier(2,2,4)
+            Arguments.of(2,2,4), // appellera : testAddition(2,2,4)
             Arguments.of(6,6,12),
             Arguments.of(3,2,5)
         );
@@ -37,7 +37,7 @@ class CalculsTest2 {
     static Stream<Arguments> chargerJeuDeTestSoustraction() throws Throwable 
     {
         return Stream.of(
-            Arguments.of(2,2,0), // appellera : testMultiplier(2,2,4)
+            Arguments.of(2,2,0), // appellera : testSoustraction(2,2,4)
             Arguments.of(6,6,0),
             Arguments.of(3,2,1)
         );
@@ -45,7 +45,7 @@ class CalculsTest2 {
     static Stream<Arguments> chargerJeuDeTestDivision() throws Throwable 
     {
         return Stream.of(
-            Arguments.of(2,2,1), // appellera : testMultiplier(2,2,4)
+            Arguments.of(2,2,1), // appellera : testDivision(2,2,4)
             Arguments.of(6,6,1),
             Arguments.of(3,2,1,5)
         );
@@ -94,7 +94,7 @@ class CalculsTest2 {
 	{
 		// Partie paramétrée
 	        Calculs monCal = new Calculs(firstNumber, secondNumber);
-	        assertEquals(expectedResult, monCal.soustraire(), "test en échec pour " + firstNumber + " / " + secondNumber + " != " + expectedResult); 
+	        assertEquals(expectedResult, monCal.soustraire(), "test en échec pour " + firstNumber + " - " + secondNumber + " != " + expectedResult); 
 
 	    // Partie indépendante (les paramètres peuvent ne servir qu'à une sous partie des tests)
 	        String n = null;
