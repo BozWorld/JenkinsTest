@@ -37,7 +37,7 @@ class CalculsTest2 {
     static Stream<Arguments> chargerJeuDeTestSoustraction() throws Throwable 
     {
         return Stream.of(
-            Arguments.of(2,2,0), // appellera : testSoustraction(2,2,4)
+            Arguments.of(2,2,0), // appellera : testSoustraction(2,2,0)
             Arguments.of(6,6,0),
             Arguments.of(3,2,1)
         );
@@ -45,7 +45,7 @@ class CalculsTest2 {
     static Stream<Arguments> chargerJeuDeTestDivision() throws Throwable 
     {
         return Stream.of(
-            Arguments.of(2,2,1), // appellera : testDivision(2,2,4)
+            Arguments.of(2,2,1), // appellera : testDivision(2,2,1)
             Arguments.of(6,6,1),
             Arguments.of(3,2,1,5)
         );
@@ -76,7 +76,7 @@ class CalculsTest2 {
 	        String n = null;
 	        assertNull(n);
 	}
-	@ParameterizedTest(name="addition numéro {index}: nombre1={0}, nombre2={1}, résultat attendu = {2}")
+	@ParameterizedTest(name="division numéro {index}: nombre1={0}, nombre2={1}, résultat attendu = {2}")
 	@MethodSource("chargerJeuDeTestDivision")
 	void testDivision(int firstNumber, int secondNumber, int expectedResult) 
 	{
@@ -88,7 +88,7 @@ class CalculsTest2 {
 	        String n = null;
 	        assertNull(n);
 	}
-	@ParameterizedTest(name="addition numéro {index}: nombre1={0}, nombre2={1}, résultat attendu = {2}")
+	@ParameterizedTest(name="soustraction numéro {index}: nombre1={0}, nombre2={1}, résultat attendu = {2}")
 	@MethodSource("chargerJeuDeTestSoustraction")
 	void testSoustraction(int firstNumber, int secondNumber, int expectedResult) 
 	{

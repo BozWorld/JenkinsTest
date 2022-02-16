@@ -108,17 +108,17 @@ class CalculsTest {
 	void testSoustraire() {
 		if (c1.soustraire() != -1)
 		{
-			fail("methode diviser non conforme 1-2 = -1 ne fonctionne pas");
+			fail("methode soustraire non conforme 1-2 = -1 ne fonctionne pas");
 		}
 		if (c2.soustraire() != -10)
 		{
-			fail("methode diviser non conforme 10-20 = -10 ne fonctionne pas");
+			fail("methode soustraire non conforme 10-20 = -10 ne fonctionne pas");
 		}
 		if (c3.soustraire() != -100)
 		{
-			fail("methode diviser non conforme 100-200 = -100 ne fonctionne pas");
+			fail("methode soustraire non conforme 100-200 = -100 ne fonctionne pas");
 		}
-		assertEquals(c1.soustraire(),-1, "methode additionner non conforme 1-2 = -1 ne fonctionne pas");
+		assertEquals(c1.soustraire(),-1, "methode soustraire non conforme 1-2 = -1 ne fonctionne pas");
 	}
 	
 
